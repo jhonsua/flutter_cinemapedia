@@ -1,5 +1,5 @@
 import '../entities/movie_entitie.dart';
 
-abstract class MoiveDataSource {
+abstract class MoviesDataSource {
   Future<List<Movie>> getNowPlaying({int page = 1});
 }
