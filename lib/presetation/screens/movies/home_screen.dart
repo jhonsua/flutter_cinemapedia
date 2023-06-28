@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cinemapedia/config/constants/enviroment.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(dotenv.env['THE_MOVIEDB_KEY'] ?? 'no hay API KEY'),
+        child: Text(Environment.movieDbKey),
       ),
     );
   }

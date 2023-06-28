@@ -4,8 +4,8 @@ import 'package:flutter_cinemapedia/config/routes/go_router.dart';
 import 'package:flutter_cinemapedia/config/themes/app_theme.dart';
 
 Future<void> main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
-  await dotenv.load(fileName: ".env");
 }
 
 class MyApp extends StatelessWidget {
