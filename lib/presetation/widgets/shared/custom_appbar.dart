@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
     final titleStyle = Theme.of(context).textTheme.titleMedium;
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.only(top: 10),
         child: SizedBox(
           width: double.infinity,
           child: Row(children: [
@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
               Icons.movie_creation,
               color: colors.primary,
             ),
-            SizedBox(width: 5),
+            SizedBox(width: 1),
             Text('CineApp', style: titleStyle),
             const Spacer(),
             IconButton(onPressed: () {}, icon: Icon(Icons.search_sharp)),

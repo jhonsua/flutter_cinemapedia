@@ -11,4 +11,22 @@ class MovieRepositoryImpl extends MoiveDataRepositorie {
   Future<List<Movie>> getNowPlaying({int page = 1}) {
     return dataSource.getNowPlaying(page: page);
   }
+
+  @override
+  Future<List<Movie>> getPopular({int page = 1}) {
+    // TODO: implement getPopular
+    return dataSource.getPopular(page: page);
+  }
+
+  @override
+  Future<List<Movie>> getTopReader({int page = 1}) {
+    // TODO: implement getPopular
+    return dataSource.getTopReader(page: page);
+  }
+
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) {
+    // TODO: implement getPopular
+    return dataSource.getUpComing(page: page);
+  }
 }
