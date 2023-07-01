@@ -10,9 +10,10 @@ class MoviesSlideShow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.height;
     final colors = Theme.of(context).colorScheme;
     return SizedBox(
-      height: 600, // alto de la tarjeta
+      height: size * 0.5, // alto de la tarjeta
       width: double.infinity, // ancho de la tarjeta
       child: Swiper(
         // widget tarjetas

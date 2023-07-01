@@ -29,4 +29,16 @@ class MovieRepositoryImpl extends MoiveDataRepositorie {
     // TODO: implement getPopular
     return dataSource.getUpComing(page: page);
   }
+
+  @override
+  Future<Movie> getMovieById(String id) {
+    // TODO: implement getMovieById
+    return dataSource.getMovieById(id);
+  }
+
+  @override
+  Future<List<Movie>> getUpComing({int page = 1}) {
+    // TODO: implement getUpComing
+    return dataSource.getUpComing(page: page);
+  }
 }

@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../config/helpers/human_format.dart';
 import '../../../../domain/entities/movie_entitie.dart';
@@ -109,7 +110,11 @@ class _Slide extends StatelessWidget {
                           ),
                         );
                       }
-                      return FadeInRight(child: child);
+                      return GestureDetector(
+                          onTap: () => context.push('/movie/${movie.id}'),
+                          child: FadeInRight(
+                            child: child,
+                          ));
                     },
                   ))),
 
