@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cinemapedia/presetation/providers/movies/providers.dart';
+import 'package:flutter_cinemapedia/presetation/providers/providers.dart';
 import 'package:flutter_cinemapedia/presetation/widgets/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/movies/movies/movies_slideshow_provider.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../providers.dart';
+import '../../providers.dart';
 import 'movies_slideshow_provider.dart';
 
 final initialLoadingProvider = Provider((ref) {

@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../domain/entities/movie_entitie.dart';
 
@@ -27,6 +28,8 @@ class MoviesSlideShow extends StatelessWidget {
             builder: RectSwiperPaginationBuilder(
                 activeColor: colors.primary, color: colors.secondary)),
         itemCount: movies.length, // cuantas tarjetas
+        onTap: (index) => context.push('/movie/${index}'),
+
         itemBuilder: (context, index) {
           // constructor
           final movie = movies[index];
@@ -63,12 +66,20 @@ class _SlideShow extends StatelessWidget {
             fit: BoxFit.cover,
             loadingBuilder: (context, child, loadingPogress) {
               if (loadingPogress != null) {
-                return const Icon(
-                  Icons.image_not_supported,
-                  size: 100,
+                return const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 25),
+                  child: Center(
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                    ),
+                  ),
                 );
               }
-              return FadeIn(child: child);
+              return GestureDetector(
+                  onTap: () => context.push('/movie/${movie.id}'),
+                  child: FadeInRight(
+                    child: child,
+                  ));
             },
           ),
         ),
